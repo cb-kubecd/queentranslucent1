@@ -1,1 +1,9 @@
 buildPack: javascript
+pipelineConfig:
+  pipelines:
+    post:
+      preSteps:
+        - image: busybox
+          command: echo
+          args:
+            - YAY
