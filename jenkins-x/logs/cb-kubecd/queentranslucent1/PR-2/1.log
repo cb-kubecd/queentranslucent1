@@ -1,0 +1,133 @@
+
+Showing logs for build [32mcb-kubecd-queentranslucent1-pr-xw2b8-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-zmcx4[0m
+{"level":"warn","ts":1573133756.7270865,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1573133756.7292557,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mcb-kubecd-queentranslucent1-pr-xw2b8-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-phc2t[0m
+{"level":"warn","ts":1573133758.0429873,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1573133758.044434,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mcb-kubecd-queentranslucent1-pr-xw2b8-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mcb-kubecd-queentranslucent1-pr-xw2b8-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-cb-kubecd-queentranslucent1-pr-2s4dk[0m
+{"level":"warn","ts":1573133765.2914941,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1573133766.3870802,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/cb-kubecd/queentranslucent1.git @ master in path /workspace/source"}
+
+Showing logs for build [32mcb-kubecd-queentranslucent1-pr-xw2b8-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:334edaf935db829e8502cf2b5814dbce033fa895,2:890f09232f1be2202485b6b645d1bcbdeb777b03
+DEBUG: ran git fetch --unshallow origin 890f09232f1be2202485b6b645d1bcbdeb777b03: 334edaf935db829e8502cf2b5814dbce033fa895: in 
+DEBUG: ran git checkout master in 
+DEBUG: ran git reset --hard 334edaf935db829e8502cf2b5814dbce033fa895 in 
+DEBUG: ran clean --force -d . in 
+DEBUG: ran git merge 890f09232f1be2202485b6b645d1bcbdeb777b03 in 
+Merged SHA f3ae29fea4d40c35b40ee78ccd2d7fbae2631596 with commit message 'Merge commit '890f09232f1be2202485b6b645d1bcbdeb777b03'' into base branch master
+Merged SHA 890f09232f1be2202485b6b645d1bcbdeb777b03 with commit message '***' into base branch master
+
+Showing logs for build [32mcb-kubecd-queentranslucent1-pr-xw2b8-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
+WARNING: failed to find Secret npm-token in namespace **
+
+Showing logs for build [32mcb-kubecd-queentranslucent1-pr-xw2b8-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN REPLACE_ME@1.0.0 No repository field.
+npm WARN REPLACE_ME@1.0.0 No license field.
+
+up to date in 0.351s
+found 0 vulnerabilities
+
+
+Showing logs for build [32mcb-kubecd-queentranslucent1-pr-xw2b8-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
+
+> REPLACE_ME@1.0.0 test /workspace/source
+> echo "no test specified" && exit 0
+
+no test specified
+
+Showing logs for build [32mcb-kubecd-queentranslucent1-pr-xw2b8-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] Downloading base image node:9-slim           
+ERROR: logging before flag.Parse: E1107 13:36:11.642788       9 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+ERROR: logging before flag.Parse: E1107 13:36:11.645742       9 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+2019/11/07 13:36:11 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0001] Error while retrieving image from cache: getting file info: stat /workspace/sha256:0e0175bbe4f8d9d104590d8d2c591017874e30977cb71aaff1cf6fa99479575c: no such file or directory 
+[36mINFO[0m[0001] Downloading base image node:9-slim           
+2019/11/07 13:36:12 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0002] Executing 0 build triggers                   
+[36mINFO[0m[0002] cmd: EXPOSE                                  
+[36mINFO[0m[0002] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0002] Using files from context: [/workspace/source] 
+[36mINFO[0m[0002] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0002] Taking snapshot of full filesystem...        
+[36mINFO[0m[0002] ENV PORT 8080                                
+[36mINFO[0m[0002] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0002] EXPOSE 8080                                  
+[36mINFO[0m[0002] cmd: EXPOSE                                  
+[36mINFO[0m[0002] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0002] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0002] WORKDIR /usr/src/app                         
+[36mINFO[0m[0002] cmd: workdir                                 
+[36mINFO[0m[0002] Changed working directory to /usr/src/app    
+[36mINFO[0m[0002] Creating directory /usr/src/app              
+[36mINFO[0m[0002] Taking snapshot of files...                  
+[36mINFO[0m[0002] Using files from context: [/workspace/source] 
+[36mINFO[0m[0002] COPY . .                                     
+[36mINFO[0m[0002] Taking snapshot of files...                  
+[36mINFO[0m[0002] CMD ["npm", "start"]                         
+[36mINFO[0m[0002] No files changed in this command, skipping snapshotting. 
+2019/11/07 13:36:14 existing blob: sha256:196b8e3c919d5639193ba6c6e54774528942041bbc37606631a2250502985c3c
+2019/11/07 13:36:14 existing blob: sha256:5bba3ecb4cd6374a19da45f2a3db0a9c0804984358b3bb4b666c28944016e5ff
+2019/11/07 13:36:14 existing blob: sha256:e01bd28a434b56ffd2a3fe9aa99b9b69aecca69904843edd30b1ee7150d79904
+2019/11/07 13:36:14 existing blob: sha256:7d083412657baa2dafba8d093034ef26f9ed2c90fb6ed95f76bb55aff03ed429
+2019/11/07 13:36:14 existing blob: sha256:a88538b9cd05cfa611e43a25582a95ad7879f6fa708b0386a26b71ee62235bb3
+2019/11/07 13:36:17 pushed blob: sha256:9e1d6910a9c8c3d25903e71c274aa640b02c07bc2279afe2fcbd984a2d649b8c
+2019/11/07 13:36:17 pushed blob: sha256:a8bd8d3ee890a7a0eeda30b09de4ce546a404d1541d45997aabe7a801021a391
+2019/11/07 13:36:18 pushed blob: sha256:3d3cdfb6fcca37b916d10499ec64b84c0b4e8514bb3093ceed74c39b57c9f920
+2019/11/07 13:36:19 gcr.io/jenkins-x-demo-238815/queentranslucent1:0.0.0-SNAPSHOT-PR-2-1: digest: sha256:cf55d89183893da9d469f8d6c53d6441969898c8524a3463962f32539b73a568 size: 1404
+
+Showing logs for build [32mcb-kubecd-queentranslucent1-pr-xw2b8-1[0m stage [32mfrom-build-pack[0m and container [32mstep-postbuild-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mcb-kubecd-queentranslucent1-pr-xw2b8-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-make-preview[0m
+sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-PR-2-1/" Chart.yaml
+sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-PR-2-1/" ../*/Chart.yaml
+sed -i -e "s|repository:.*|repository: gcr.io\/jenkins-x-demo-238815\/queentranslucent1|" values.yaml
+sed -i -e "s/tag:.*/tag: 0.0.0-SNAPSHOT-PR-2-1/" values.yaml
+echo "  version: 0.0.0-SNAPSHOT-PR-2-1" >> requirements.yaml
+** step helm build
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
+Adding missing Helm repo: storage.googleapis.com-0 https://storage.googleapis.com/t3n-helm-charts
+Successfully added Helm repository storage.googleapis.com-0.
+
+Showing logs for build [32mcb-kubecd-queentranslucent1-pr-xw2b8-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-preview[0m
+Creating a preview
+Commit author email is empty for: 890f09232f1be2202485b6b645d1bcbdeb777b03
+Looking for commits in: /workspace/source/
+Found commit author match for: rawlingsj with email address: rawlingsj80@gmail.com
+Created environment cb-kubecd-queentranslucent1-pr-2
+Namespace **-cb-kubecd-queentranslucent1-pr-2 created 
+expose:
+  Annotations:
+    helm.sh/hook: post-install,post-upgrade
+    helm.sh/hook-delete-policy: hook-succeeded
+  config:
+    domain: 34.76.245.18.nip.io
+    exposer: Ingress
+    http: "true"
+preview:
+  image:
+    repository: gcr.io/jenkins-x-demo-238815/queentranslucent1
+    tag: 0.0.0-SNAPSHOT-PR-2-1
+
+
+Updating PipelineActivities cb-kubecd-queentranslucent1-pr-2-1 which has status Running
+WARNING: preview application http://queentranslucent1.**-cb-kubecd-queentranslucent1-pr-2.34.76.245.18.nip.io not available, error was 503 503 Service Temporarily Unavailable, delaying for: 818.058174ms
+WARNING: preview application http://queentranslucent1.**-cb-kubecd-queentranslucent1-pr-2.34.76.245.18.nip.io not available, error was 503 503 Service Temporarily Unavailable, delaying for: 1.189652786s
+WARNING: preview application http://queentranslucent1.**-cb-kubecd-queentranslucent1-pr-2.34.76.245.18.nip.io not available, error was 503 503 Service Temporarily Unavailable, delaying for: 1.582170472s
+WARNING: preview application http://queentranslucent1.**-cb-kubecd-queentranslucent1-pr-2.34.76.245.18.nip.io not available, error was 503 503 Service Temporarily Unavailable, delaying for: 4.598408602s
+WARNING: preview application http://queentranslucent1.**-cb-kubecd-queentranslucent1-pr-2.34.76.245.18.nip.io not available, error was 503 503 Service Temporarily Unavailable, delaying for: 6.341150993s
+Preview application is now available at: http://queentranslucent1.**-cb-kubecd-queentranslucent1-pr-2.34.76.245.18.nip.io
